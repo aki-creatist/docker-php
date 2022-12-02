@@ -13,9 +13,9 @@ RUN docker-php-ext-install pdo_mysql mbstring
 RUN echo 'error_reporting = E_ALL' >> /usr/local/etc/php/conf.d/99_myconf.ini
 RUN echo 'date.timezone = Asia/Tokyo' >> /usr/local/etc/php/conf.d/99_myconf.ini
 RUN pecl install redis
-RUN pecl install xdebug
+#RUN pecl install xdebug
 RUN docker-php-ext-enable redis
-ADD ./docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/
+#ADD ./docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/
 ADD ./composer.phar /usr/local/bin/composer
 
 RUN apt-get install -y vim
