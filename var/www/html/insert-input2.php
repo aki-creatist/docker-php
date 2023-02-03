@@ -6,3 +6,4 @@
 <input type="submit" value="追加">
 </form>
 <?php require '../footer.php'; ?>
+'
