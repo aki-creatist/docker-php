@@ -3,8 +3,8 @@
 namespace App\Factories;
 
 use InvalidArgumentException;
-use App\Enums\ParamsPropertyName;
-use App\Enums\ParamsPropertyType;
+use Framework\Enums\ParamsPropertyName;
+use Framework\Enums\ParamsPropertyType;
 use App\Services\ParamsService;
 
 class ParamsServiceFactory

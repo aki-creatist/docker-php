@@ -2,6 +2,9 @@
 
 namespace App\Enums;
 
+use Framework\Enums\ParamsPropertyName;
+use Framework\Enums\ParamsPropertyType;
+
 use InvalidArgumentException;
 
 enum CsvParamsKey: int implements ParamsPropertyName

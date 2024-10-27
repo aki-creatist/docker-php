@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums;
+namespace Framework\Enums;
 
 /**
  * Paramsオブジェクトのプロパティの型の列挙
