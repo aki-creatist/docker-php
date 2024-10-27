@@ -4,11 +4,15 @@
 
 ```bash
 docker-compose up -d
-docker exec -it project bash
+docker exec -it docker-php bash
 cd php_libs/
 composer require piece/stagehand-testrunner
 ```
 
 ```bash
 curl http://localhost:8080/test.json
+```
+
+```shell
+php cli.php --uri=master/create
 ```
