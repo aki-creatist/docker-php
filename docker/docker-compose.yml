@@ -4,9 +4,10 @@ services:
   web:
     build: build
     ports:
-      - "8080:80"
+      - "8888:80"
     volumes:
       - ../var/www/html:/var/www/html
+      - ../:/product/docker-php
     depends_on:
       - db
     networks:

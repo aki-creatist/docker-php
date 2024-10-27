@@ -4,7 +4,7 @@
 
 ```bash
 docker-compose up -d
-docker exec -it project bash
+docker exec -it docker-php bash
 cd php_libs/
 composer require piece/stagehand-testrunner
 ```
