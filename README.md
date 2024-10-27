@@ -12,3 +12,7 @@ composer require piece/stagehand-testrunner
 ```bash
 curl http://localhost:8080/test.json
 ```
+
+```shell
+php cli.php --uri=master/create
+```

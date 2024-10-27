@@ -5,7 +5,7 @@ namespace backend;
 $container = require_once __DIR__ . '/bootstrap/app.php';
 
 /**
- * php index.php --run=MasterController/execute
+ * php cli.php --uri=master/create
  */
 
 use Framework\Console\Kernel;
