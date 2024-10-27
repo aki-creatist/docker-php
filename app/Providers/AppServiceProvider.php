@@ -5,10 +5,11 @@ namespace App\Providers;
 use App\Factories\ParamsServiceFactory;
 use App\Http\Controllers\MasterController;
 use App\Models\MasterModel;
+use Framework\Container\Container;
 use Framework\Providers\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
-    protected $container;
+    protected Container $container;
 
     public function __construct($container) {
         parent::__construct($container);

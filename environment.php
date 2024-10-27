@@ -1,7 +1,6 @@
 <?php
-const ENVIRONMENT = 'docker';
-const USER = "root";
-const PASS = "root";
-const HOST = "mysql";
+const USER = "docker";
+const PASS = "password";
+const HOST = "docker-php-mysql";
 const NAME = "project";
 const TYPE = "mysql";

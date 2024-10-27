@@ -13,17 +13,13 @@ class BaseModel
         $this->connect();
     }
 
-    private function connect()
+    private function connect(): void
     {
         try {
-            switch (TYPE) {
-                case 'mysql':
-                    $dsn = 'mysql:host=' . HOST . ';dbname=' . NAME . ';charset=utf8';
-                    break;
-                case 'pgsql':
-                    $dsn = 'pgsql:dbname=' . NAME.' host=' . HOST . ' port=5432';
-                    break;
-            }
+            $dsn = match (TYPE) {
+                'mysql' => 'mysql:host=' . HOST . ';dbname=' . NAME . ';charset=utf8',
+                'pgsql' => 'pgsql:dbname=' . NAME.' host=' . HOST . ' port=5432'
+            };
             $this->pdo = new PDO($dsn, USER, PASS);
             //エラー情報を取得するための属性の設定
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

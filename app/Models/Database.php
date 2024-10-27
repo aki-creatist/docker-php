@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\TableName;
 use Exception;
 use PDOException;
 
@@ -13,9 +14,9 @@ class Database extends BaseModel
     private string $offset  = '';
     private string $groupby = '';
 
-    public function select(string $table, string $column = '', string $where = ''): array
+    public function select(TableName $table, string $column = '', string $where = ''): array
     {
-        $sql = $this->getSql($table, $where, $column);
+        $sql = $this->getSql($table->value, $where, $column);
         $stmt = $this->pdo->query($sql);
         $data = [];
         foreach ($stmt as $key => $value) {

@@ -14,16 +14,18 @@ services:
       - lampnet
 
   db:
-    image: mysql:8.2
     platform: linux/amd64
+    image: mysql:8.2
+    container_name: docker-php-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
+      MYSQL_DATABASE: project
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: password
     volumes:
-      - db_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+      - ./mysql/my.cnf:/etc/my.cnf
     networks:
       - lampnet
 
